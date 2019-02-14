@@ -7,40 +7,48 @@
     <link rel="stylesheet" href="./css/styles.css">
     <link rel="stylesheet" href="./css/grid.css">
     <title>Like a Woman</title>
-    <link href="https://fonts.googleapis.com/css?family=Bitter:400,700" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=Bitter:400,700|Lato:400,900" rel="stylesheet">
     <link rel="icon" href="./img/IconoLAW.png">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">  
 </head>
 
 <body>
     <header class="logo">
+
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <img src="./img/LogoBlanco.png" alt=" " id="logoIcon">
+                    <img src="./img/LogoBlanco.png" alt=" " id="logo_icon">
                 </div>
             </div>
         </div>
     </header>
-
     <main class="start" id="start">
         <div class="container">
             <div class="row">
-                <div>
-                    <h1 id="first_title">Registrate o inicia sesión</h1><br>
+                <div class="col-12">
+                    <h1 id="first_title">Inicia sesión</h1><br>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <img src="./img/LogoBlanco.png" alt=" " id="logo_icon">
+                </div>
+            </div>
+        </div>
                     <form action="index.html">
                         <label>Correo</label>
-                        <input id="text_email" type="email" placeholder="Ingrese su correo electrónico..">
+                        <input id="text_email" type="email" placeholder="Ingrese correo electrónico..">
                         <label>Contraseña</label>
-                        <input id="text_password" type="password" placeholder="Ingrese su contraseña..">
-
+                        <input id="text_password" type="password" placeholder="Ingrese contraseña..">
                         <button id="login_btn">INICIAR SESION</button>
                         <button id="register_btn">REGISTRATE</button>
-                        <button id="sign_google_btn"><img src="img/google.png" width="20" height="20"> INICIAR SESION
-                            CON
-                            GOOGLE</button>
-                        <button id="sign_facebook_btn"><img src="img/facebook.png" width="20" height="20"> INICIAR
-                            SESION CON FACEBOOK</button>
+                        <icon id="sign_google_btn" title="Iniciar sesión con Google"><img src="img/google.png">
+                        <icon id="sign_facebook_btn" title="Iniciar sesión con Facebook"><img src="img/facebook.png">
                     </form>
+                    <img id="icon_app" src="./img/IconoLAW.png">
                 </div>
             </div>
         </div>
@@ -72,11 +80,16 @@
                         <input type="radio" id="public" name="state" value="Público"><label>Público</label><br>
                         <input type="radio" id="private" name="state" value="Privado"><label>Privado</label>
                     </div>
+
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div id="postContainer">
+                            <textarea id="post_text"></textarea>
+                        </div>
+                    </div>
                 </div>
 
-                <div id="postContainer">
-                    <textarea id="post_text"></textarea>
-                </div>
             </div>
         </form>
     </section>
@@ -93,7 +106,6 @@
             </div>
         </div>
     </footer>
-
     <script src="https://www.gstatic.com/firebasejs/5.8.1/firebase.js"></script>
     <script>
         // Initialize Firebase

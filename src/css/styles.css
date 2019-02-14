@@ -6,91 +6,89 @@ body{
     background-color: #6C3483;
     width: 100%;
     height: auto;
+    margin-bottom: 0;
  }
  #logoIcon{
-   width: 36%;
-   margin: 0 100px;
+   width: 40%;
+   margin: 0 90px;
  }
  .start{
-    margin-top: 30px;
     width: 100%;
     align-content: center;
+    background-image: url(../img/athlete-barbell-body-1552249.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
  }
  #first_title{
-    color: #6C3483;
+    color: white;
     text-align: center;
+    margin-top: 15px;
  }
- .start input, button{
+ .start input, #text_email, #text_password{
     width: 90%;
     height: 40px;
     margin: 10px;
     border-radius: 5px;
     border: 1px solid #6C3483;
     font-family: 'Bitter', serif;
+    padding-left: 10px;
+    color: #6C3483;
+    margin-top: 0;
 }
-.start button{
+.start #login_btn, #register_btn{
+   width: 90%;
+    height: 40px;
+    margin: 10px;
+    border-radius: 5px;
+    border: 1px solid #6C3483;
     background-color: #6C3483;
     color: #ffffff;
     font-size: 14px;
     font-weight: bold;
  }
- .start input{
-    padding-left: 10px;
-    color: #6C3483;
+#sign_google_btn img{
+    width: 50px;
+    height: auto;
+    border-radius: 50px;
+    margin-left: 100px;
+    background-color: blue;
+ }
+ #sign_facebook_btn i{
+    width: 50px;
+    height: auto;
+    border-radius: 50px;
+ }
+ #icon_app img{
+    width: 100px;
+    height: auto;
+    margin: 10px 20px;
  }
  ::-webkit-input-placeholder { color: #D2B4DE; }
  :-moz-placeholder { /* Firefox 18- */ color:#D2B4DE; }
  ::-moz-placeholder { /* Firefox 19+ */ color:#D2B4DE; }
  :-ms-input-placeholder { color: #D2B4DE; }
+
  .start label{
-    color: #6C3483;
-    margin: 10px;
-    font-size: 24PX;
+    color: white;
+    margin: 0px 10px;;
+    font-size: 20PX;
  }
- #sign_google_btn{
-   background-color: #C0392B;
-}
-#sign_facebook_btn{
- background-color: #3B5998;
-}
  #welcome{
     background-color: #6C3483;
     text-align: center;
     color: white;
     display: none;
  }
- /* #img_welcome{
-    width:40%;
-    height:auto;
-    margin-top:10px;
- }
- #imgBarbell{
-    width: 100%;
- }
- #welcome p {
-    width: 100%;
-    text-align: center;
-    color: white;
-    padding: 0 auto;
-    margin-top: 10px;
-    } */
- #start_btn{
-    background-color: #D2B4DE;
-    width: 100px;
-    height: 30px;
-    color: #6C3483;
-    align-content: center;
-    margin: 0 auto;
- }
-#app  img{
+#app img{
     width: 50px;
     height: 50px;
     border-radius: 50%;
     border: 1px solid #6C3483;
 }
- textarea{
+ #textareaContect{
    width: 100%;
-   height: 26%;
+   height: 100px;
    margin-top: 10px;
  }
  #stateButton{
@@ -103,17 +101,32 @@ body{
     margin-top: 10px;
     justify-content: right;
  }
- #logout_btn {
+ #sign_off_btn {
     width: 30%;
     height: 30px;
     margin-left: 70%;
  }
- #postContainer{
-    border: solid white;
+ #txtAreaPost{
+    width: 100%;
+    height: 100px;
+    background-color: #D2B4DE;
+    color: black;
+    font-family: 'Lato', sans-serif;
+    font-size: 20px;
+    border: none;
  }
+ i{
+    display: inline;
+ }
+
  @media only screen and (min-width: 768px) {
     body{
        align-content: center;
+       /* background-image: url(../img/athlete-barbell-body-1552249.jpg);
+       background-size: cover;
+       background-position: center;
+       background-repeat: no-repeat;
+    } */
     }
    #logoIcon {
       width: 15%;
