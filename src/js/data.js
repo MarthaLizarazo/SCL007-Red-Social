@@ -25,7 +25,7 @@ const registerPost = (postText, postStatus,email) => {
     .catch((error) => {
       console.error("Error > " + error.message);
     });
-    location.reload(); //recargo pagina
+    //location.reload(); //recargo pagina
 };
 
 const readPost = (onPostChange) => {
@@ -59,4 +59,9 @@ const deletePost = (key) => {
     return null;
   }
 
+}
+
+// función Likes
+const likePost = (keyPost) =>{
+  
 }

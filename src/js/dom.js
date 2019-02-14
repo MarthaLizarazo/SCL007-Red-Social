@@ -79,6 +79,11 @@ window.onload = () => {
         }
       }
       registerPost(contect, statusRadio, email);
+      textareaContect.value =""; //limpio mi texarea
+      let stateRadio= document.getElementsByName('state');//limpio mi radio button luego de publicar
+      for (let i=0; i<stateRadio.length; i++){
+        stateRadio[i].checked= false;
+      }
     })
   const readPostFromDatabase = () => {
     postContainer.innerHTML = "";
@@ -89,17 +94,24 @@ window.onload = () => {
           <h5>${post.val().userName}</h5>
           <h6>${post.val().status}</h6>
           <textarea disabled id="txtAreaPost">${post.val().post}</textarea>
-          <i class="far fa-heart" title="Me gusta esta publicacion"></i>
+          <i class="far fa-heart" id="like_${post.key}" name="likes" title="Me gusta esta publicacion"></i>
           <i class="far fa-comment-dots coment" title="Comentar publicacion" id="${post.key}"></i>
           <i class="far fa-edit" title="Editar publicacion" id="edit_${post.key}"></i>
           <i class="far fa-trash-alt deletePost" title="Eliminar publicacion" id="delete_btn${post.key}"></i>
           </div>`;
-      //hago una coleccion de botones
-
+      
+          //hago un arreglo de botones para eliminar post
       let coleccButton = document.getElementsByClassName("deletePost");
       for (let i = 0; i < coleccButton.length; i++) {
         coleccButton[i].addEventListener("click", deletePost);
       }
+
+      //Hacer un arreglo de iconos de likes
+      let coleccLikes = document.getElementsByClassName("likes");
+      for (let i =0; i<coleccLikes.length; i++){
+        coleccLikes[i].addEventListener("click", likePost);
+      }
+
     });
   }
 
