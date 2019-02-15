@@ -63,5 +63,33 @@ const deletePost = (key) => {
 
 // función Likes
 const likePost = (keyPost) =>{
-  
+  // guardo el key de mi publicacion
+  let idPost = this.idPost
+  let like = keyPost.target.getAttribute("idPost").substring(10, 50);// Target Devuelve el elemento del DOM que disparó el evento (inicialmente)
+  let userId = firebase.auth().currentUser.userId;
+ // firebase.auth().currentUser.displayName;
+ // firebase.auth().currentUser.email;
+  //guardo el key de mi publicacion
+  //verifico si mi post tiene like
+firebase.database().ref(`users/${firebase.auth().currentUser.userId}/post/${like}`).once("value", function(snapshot){
+    //verifico si mi post tiene like o no
+    if (snapshot.val()[userId].likes !== undefined){
+      //Si tiene like realiza esto
+        if (Object.keys(snapshot.val()[userId].likes).indexOf(firebase.auth().currentUser.userId) !== -1){
+          firebase.database().ref(`users/${firebase.auth().currentUser.userId}/post/${like}`).update({
+            alert:("Usuario ya dio like")
+          })
+        } else{
+          //si no tiene like le asigno un like
+          firebase.database().ref(`users/${firebase.auth().currentUser.userId}/post/${like}`).update({
+
+          })
+        }
+    } else{
+      firebase.database().ref(`users/${firebase.auth().currentUser.userId}/post/${like}`).update({
+
+        })
+      
+    }
+})
 }
